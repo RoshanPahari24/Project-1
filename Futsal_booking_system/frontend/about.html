@@ -10,19 +10,33 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
-   <!-- ===== FIXED BACK BUTTON ===== -->
-  <a href="index.html" class="back-fixed" aria-label="Back to Home">
-    <i class="bi bi-arrow-left-circle-fill"></i>
-  </a>
+  
+ <!-- ====================START HEADER=================== -->
+<header class="navbar" id="head">
+  <div class="nav-container">
 
-  <!-- ===== HEADER / BREADCRUMB ===== -->
-  <header class="page-header">
-    <div class="page-nav">
-      <span><a href="index.html">Home</a></span>
-      <span class="divider">/</span>
-      <span class="current">About Us</span>
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="FutsalHub Logo">
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="about.html"class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-auth">
+      <a href="login.html" class="btn btn-login">Login</a>
+      <a href="register.html" class="btn btn-register">Register</a>
     </div>
-  </header>
+
+  </div>
+</header>
+<!-- ====================END HEADER=================== -->
+
 
   <!-- ===== MAIN ===== -->
   <main class="info-page">
@@ -39,13 +53,13 @@
     <!-- ===== BANNER GRID ===== -->
     <section class="about-banners">
       <div class="banner-box">
-        <img src="assets/images/favicon.png" alt="">
+        <img src="assets/images/aboutimg1.jpg" alt="about-banner-1">
       </div>
       <div class="banner-box">
-        <img src="" alt="">
+        <img src="assets/images/aboutimg2.jpg" alt="about-banner-2">
       </div>
       <div class="banner-box">
-        <img src="" alt="">
+        <img src="assets/images/aboutimg3.jpg" alt="about-banner-3">
       </div>
     </section>
 
@@ -92,10 +106,10 @@
 
       <div class="testimonial-header">
         
-        <img src="assets/images/user1.jpg" alt="Reviewer image">
+        <img src="assets/images/t1.jpg" alt="Reviewer image">
 
         <div class="reviewer-info">
-          <strong>Local Futsal Organizer</strong>
+          <strong>Adam Ghimire</strong>
           <span>Kathmandu</span>
         </div>
       </div>
@@ -112,10 +126,10 @@
 
       <div class="testimonial-header">
         
-        <img src="assets/images/user2.jpg" alt="Reviewer image">
+        <img src="assets/images/t2.jpg" alt="Reviewer image">
 
         <div class="reviewer-info">
-          <strong>Amateur Player</strong>
+          <strong>Max Acharya</strong>
           <span>Lalitpur</span>
         </div>
       </div>
@@ -132,10 +146,10 @@
 
       <div class="testimonial-header">
         
-        <img src="assets/images/favicon.png" alt="Reviewer image">
+        <img src="assets/images/t3.jpg" alt="Reviewer image">
 
         <div class="reviewer-info">
-          <strong>Sports Enthusiast</strong>
+          <strong>Rox Bajracharya</strong>
           <span>Bhaktapur</span>
         </div>
       </div>

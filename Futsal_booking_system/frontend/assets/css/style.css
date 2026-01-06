@@ -41,7 +41,7 @@ html, body{
 
 /* Logo */
 .logo img {
-  height: 140px;
+  height: 100px;
 }
 
 /* Nav links */
@@ -124,12 +124,6 @@ html, body{
   border-color:var(--primary);
 }
 /* ===== FOOTER ===== */
-
-.footer {
-  background: #111;
-  color: #fff;
-  padding: 40px 0 0;
-}
 
 .footer-container {
   width: 90%;
@@ -765,7 +759,7 @@ html, body{
 
 /* Banner box */
 .banner-box {
-  height: 180px;
+  height: 250px;
   border-radius: 12px;
   overflow: hidden;       /* IMPORTANT */
   background: #eaeaea;
@@ -814,7 +808,7 @@ html, body{
   background: #ffffff;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  box-shadow: 0 0px 4px var(--primary);
 }
 
 .mission h2 {
@@ -852,7 +846,7 @@ html, body{
   background: #f9f9f9;
   padding: 25px;
   border-radius: 12px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--primary);
 }
 
 /* Header with image */
@@ -864,11 +858,10 @@ html, body{
 }
 
 .testimonial-header img {
-  width: 44px;
-  height: 44px;
+  width:90px;
+  height:90px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #56a61e;
 }
 
 /* Reviewer info */
