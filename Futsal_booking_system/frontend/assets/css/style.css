@@ -11,6 +11,7 @@ html, body{
 :root{
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --primary: rgb(108, 211, 21);
+    --secondary: #1F2937;
 }
 
 
@@ -882,76 +883,62 @@ html, body{
   line-height: 1.5;
 }
 /* =========================
-   BOOKING PAGE (FINAL)
+   BOOKING PAGE
    ========================= */
 
 .booking-page {
-  padding: 120px 20px 80px;
+  padding: 120px 30px 80px;
   background: #f4f6f8;
   font-family: var(--font-family);
 }
 
-/* Main card */
-.booking-container {
-  max-width: 600px;
+.booking-wrapper {
+  max-width: 1200px;
   margin: auto;
-  background: #ffffff;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* LEFT */
+.booking-left {
+  background: #fff;
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 10px 28px rgba(0,0,0,0.08);
 }
 
-/* Heading */
 .booking-title {
-  text-align: center;
   font-size: 30px;
   margin-bottom: 6px;
 }
 
 .booking-subtitle {
-  text-align: center;
   font-size: 14px;
   color: #666;
   margin-bottom: 30px;
 }
 
-/* Form sections */
-.booking-form {
-  width: 100%;
-}
-
-.form-section {
-  margin-bottom: 30px;
-}
-
-.form-section h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: #111;
-}
-
-/* Form groups */
+/* FORM */
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-.booking-form label {
+.booking-left label {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
-  font-size: 14px;
 }
 
-.booking-form input[type="date"] {
+.booking-left input[type="date"] {
   width: 100%;
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 14px;
 }
 
-/* =========================TIME SLOTS========================= */
-
+/* TIME SLOTS */
 .time-slots {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -967,14 +954,7 @@ html, body{
   border: 1px solid #ccc;
   border-radius: 8px;
   text-align: center;
-  font-size: 14px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  background: #fff;
-}
-
-.time-slots label:hover {
-  border-color: #56a61e;
 }
 
 .time-slots input:checked + label {
@@ -983,8 +963,7 @@ html, body{
   border-color: #56a61e;
 }
 
-/* =========================COURT SELECTION========================= */
-
+/* COURTS */
 .court-cards {
   display: flex;
   gap: 15px;
@@ -1001,18 +980,6 @@ html, body{
   border-radius: 12px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.2s ease;
-  background: #fff;
-}
-
-.court-card strong {
-  display: block;
-  font-size: 16px;
-}
-
-.court-card span {
-  font-size: 13px;
-  color: #666;
 }
 
 .court-cards input:checked + .court-card {
@@ -1020,74 +987,50 @@ html, body{
   background: #f1f8ec;
 }
 
-/* =========================PAYMENT INFO========================= */
-
+/* PAYMENT */
 .payment-info {
   background: #f1f8ec;
   padding: 12px;
   border-radius: 8px;
-  font-size: 14px;
+  margin-bottom: 25px;
   color: #2f6b00;
-  margin-bottom: 25px;
 }
 
-/* =========================BOOKING SUMMARY========================= */
-
-.booking-summary {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-
-.booking-summary h4 {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.booking-summary p {
-  margin: 4px 0;
-}
-
-/* =========================SUBMIT BUTTON========================= */
-
+/* BUTTON */
 .btn-book {
   width: 100%;
   padding: 14px;
-  background: #56a61e;
+  background:var(--secondary);
   border: none;
   border-radius: 12px;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: 0.3s ease-in-out;
 }
 
 .btn-book:hover {
-  background: #489015;
+  background:var(--primary );
 }
 
-/* =========================RESPONSIVE========================= */
-
-@media (max-width: 600px) {
-  .time-slots {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .court-cards {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 400px) {
-  .time-slots {
-    grid-template-columns: 1fr;
-  }
+/* RIGHT */
+.booking-right {
+  top: 120px;       
+  right: 40px;      
+  width: 320px;      
 }
 
 
+.booking-summary {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
 
+.booking-summary h3 {
+  margin-bottom: 10px;
+}
 
 
 
