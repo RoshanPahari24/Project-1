@@ -291,168 +291,223 @@ html, body{
   font-size: 13px;
   color: #aaa;
 }
-/* ===== BASE ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ===== SUPPORT PAGE (PALE DESIGN) ===== */
+
+.support-page {
+  background: #fafafa;
 }
 
-body {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  color: #222;
-  background: #fff;
-}
-
-/* ===== COMMON WRAPPER ===== */
-.support-wrap {
+.wrap {
   width: 90%;
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
-    text-align: center;
-
 }
 
-/* ===== INTRO ===== */
+/* Intro */
 .support-intro {
-  padding: 80px 0;
-  background: #f6f8f5;
-  text-align: center;
+  padding: 100px 0 80px;
 }
 
 .support-intro h1 {
-  font-size: 34px;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
 .support-intro p {
-  color: #555;
   font-size: 15px;
+  color: #666;
+  max-width: 500px;
 }
 
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  padding:7px;
-  text-decoration: none;
-  color: #000;
-  border-bottom: 1px solid transparent;
-  font-size:50px;
-  border-radius: 50%;
-  width:80px;
-  background: #0000002e;
+/* Sections */
+.support-section {
+  padding: 80px 0;
 }
 
-.back-link:hover {
-  border-color: #56a61e;
-  color: #56a61e;
+.support-section.pale {
+  background: #f3f6f2;
 }
 
-/* ===== SECTIONS ===== */
-.support-block {
-  padding: 70px 0;
-}
-
-.support-block.light {
-  background: #ffffff;
-}
-
-.support-block.dark {
-  background: #f0f3ef;
-}
-
-.support-block h2 {
+.support-section h2 {
   font-size: 26px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-/* ===== FAQ ===== */
-.qa {
-  margin-bottom: 18px;
+/* FAQ */
+.faq {
+  margin-bottom: 22px;
 }
 
-.qa h4 {
+.faq h4 {
   font-size: 16px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
-.qa p {
+.faq p {
   font-size: 14px;
   color: #555;
 }
 
-/* ===== PRICING ===== */
-.pricing-grid {
+/* Pricing */
+.price-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  margin-bottom: 35px;
+  gap: 18px;
+  margin-bottom: 40px;
 }
 
-.price-item {
-  padding: 20px;
+.price-list div {
+  padding: 18px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  text-align: center;
 }
 
-.price-item h4 {
-  margin-bottom: 5px;
-}
-
-.price-item span {
+.price-list span {
   display: block;
-  margin-top: 8px;
   font-weight: 600;
+}
+
+.price-list small {
+  color: #777;
+}
+
+.price-list strong {
+  display: block;
+  margin-top: 6px;
   color: #56a61e;
 }
 
 /* Tournament */
-.tournament-note {
-  padding-top: 20px;
-  border-top: 1px solid #ccc;
-}
-
-.tournament-note h3 {
+.tournament h3 {
   margin-bottom: 10px;
   color: #56a61e;
 }
 
-.tournament-note ul {
-  padding-left: 18px;
-}
-
-.tournament-note li {
+.tournament p {
+  font-size: 14px;
   margin-bottom: 6px;
 }
 
-/* ===== CONTACT ===== */
-.contact-details {
-  margin-bottom: 20px;
-}
-
-.simple-form {
+/* Contact form */
+.contact-minimal {
+  margin-top: 20px;
   max-width: 400px;
 }
 
-.simple-form input,
-.simple-form textarea {
+.contact-minimal input,
+.contact-minimal textarea {
   width: 100%;
-  margin-bottom: 12px;
   padding: 10px;
+  margin-bottom: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 
-.simple-form button {
+.contact-minimal button {
   padding: 10px 20px;
-  background: #000;
-  color: #fff;
   border: none;
   border-radius: 20px;
+  background: #000;
+  color: #fff;
   cursor: pointer;
 }
 
-.simple-form button:hover {
+.contact-minimal button:hover {
   background: #56a61e;
 }
+
+/* ===== FAQ / INFO PAGES COMMON STYLE ===== */
+
+.info-page {
+  background: #f4f6f3;
+  min-height:80vh;
+  padding: 120px 0 60px;
+}
+
+.info-container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px #57a61e35;
+}
+
+/* Page title */
+.info-container h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+/* FAQ items */
+.faq-item {
+  margin-bottom: 25px;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.faq-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ===== BREADCRUMB NAV ===== */
+
+.page-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+.page-nav {
+  font-size: 14px;
+}
+
+.page-nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.page-nav a:hover {
+  color: #56a61e;
+}
+
+.page-nav .divider {
+  margin: 0 6px;
+  color: #999;
+}
+
+.page-nav .current {
+  color: #56a61e;
+  font-weight: 500;
+}
+
+/* ===== FIXED BACK BUTTON ===== */
+
+.back-fixed {
+  position: fixed;
+  top: 18px;
+  left: 20px;
+  font-size: 28px;
+  color: #222;
+  z-index: 1100;
+}
+
+.back-fixed:hover {
+  color: #56a61e;
+}
+
+
