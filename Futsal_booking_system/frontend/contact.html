@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Futsal Booking System</title>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- FIXED BACK BUTTON -->
+  <a href="index.html" class="back-fixed" aria-label="Back to Home">
+    <i class="bi bi-arrow-left-circle-fill"></i>
+  </a>
+
+  <!-- BREADCRUMB -->
+  <header class="page-header">
+    <div class="page-nav">
+      <span><a href="index.html">Home</a></span>
+      <span class="divider">/</span>
+      <span class="current">Contact</span>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="info-page">
+
+    <!-- BIG MAIN BOX -->
+    <section class="contact-main-box">
+
+      <!-- TITLE -->
+      <div class="contact-title">
+        <h1>Contact Us</h1>
+        <p>
+          For bookings, tournaments, or any futsal-related queries,
+          feel free to reach out to us.
+        </p>
+      </div>
+
+      <!-- TWO COLUMNS -->
+      <div class="contact-content">
+
+        <!-- LEFT BOX -->
+        <div class="contact-box contact-details">
+
+          <h2>Contact Details</h2>
+
+          <div class="detail-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <strong>Phone</strong>
+              <span>+977-98XXXXXXXX</span>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <strong>Email</strong>
+              <span>futsalhub@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong>Location</strong>
+              <span>Main City Road, Kathmandu</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT BOX -->
+        <div class="contact-box contact-form-area">
+
+          <h2>Send a Message</h2>
+
+          <form action="send_mail.php" method="post" class="contact-form">
+  <input type="text" name="name" placeholder="Enter your name" required>
+  <input type="email" name="email" placeholder="Enter your email" required>
+  <textarea name="message" placeholder="Write message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MAP-->
+    <section class="contact-map-full">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.3171361731!2d85.28493308893414!3d27.7089542522279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1767678402563!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+  </main>
+
+</body>
+</html>

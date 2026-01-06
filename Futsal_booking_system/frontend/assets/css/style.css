@@ -399,7 +399,7 @@ html, body{
   padding: 10px;
   margin-bottom: 12px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid#56a61e;
 }
 
 .contact-minimal button {
@@ -421,6 +421,8 @@ html, body{
   background: #f4f6f3;
   min-height:80vh;
   padding: 120px 0 60px;
+  font-family: var(--font-family);
+
 }
 
 .info-container {
@@ -470,6 +472,7 @@ html, body{
   padding-left: 80px;
   z-index: 1000;
   border-bottom: 1px solid #ddd;
+  font-family: var(--font-family);
 }
 
 .page-nav {
@@ -509,5 +512,213 @@ html, body{
 .back-fixed:hover {
   color: #56a61e;
 }
+
+/* ===== PRICING PAGE ===== */
+
+.page-intro {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+/* Pricing sections */
+.pricing-section {
+  margin-bottom: 45px;
+}
+
+.pricing-section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* Grid for regular pricing */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* Price cards */
+.price-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.price-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.price-card .time {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.price-card .price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #56a61e;
+}
+
+/* Tournament pricing */
+.tournament-section {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 30px;
+}
+
+.tournament-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tournament-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.tournament-list li:last-child {
+  border-bottom: none;
+}
+
+.tournament-list span {
+  color: #56a61e;
+  font-weight: 600;
+}
+/* ===== CONTACT PAGE ===== */
+
+.contact-main-box {
+  width: 92%;
+  max-width: 1200px;
+  margin:  50px auto ;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+/* Title */
+.contact-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.contact-title h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.contact-title p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Two-column layout */
+.contact-content {
+  display: flex;
+  gap: 28px;
+}
+
+/* Common inner boxes */
+.contact-box {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Headings */
+.contact-box h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Contact details */
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.detail-item i {
+  font-size: 20px;
+  color:black;
+}
+
+.detail-item div {
+  line-height: 1.4;
+}
+
+.detail-item strong {
+  display: block;
+  font-size: 14px;
+}
+
+.detail-item span {
+  font-size: 15px;
+  color: #333;
+}
+
+/* Form */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 11px;
+  border-radius: 22px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #56a61e;
+}
+
+/* Map */
+.contact-map-full {
+  width: 100%;
+  height: 300px;
+}
+
+.contact-map-full iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
 
 
