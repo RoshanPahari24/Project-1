@@ -49,9 +49,119 @@
 
 
     <!-- ====================START MAIN=================== -->
-    <main>
+    <main class="booking-page">
 
-    </main>
+  <div class="booking-container">
+
+    <h1 class="booking-title">Book a Futsal Slot</h1>
+    <p class="booking-subtitle">
+      Select date, time slot and court. Payment is cash on arrival.
+    </p>
+
+    <form class="booking-form">
+
+      <!-- ===== SECTION 1: DATE & TIME ===== -->
+      <div class="form-section">
+        <h3>Booking Details</h3>
+
+        <div class="form-group">
+          <label for="booking_date">Select Date</label>
+          <input type="date" id="booking_date" name="booking_date" required>
+        </div>
+
+        <div class="form-group">
+          <label>Select Time Slot</label>
+
+          <div class="time-slots">
+            <input type="radio" id="t1" name="time_slot" value="06:00-07:00" required>
+            <label for="t1">06:00 - 07:00</label>
+
+            <input type="radio" id="t2" name="time_slot" value="07:00-08:00">
+            <label for="t2">07:00 - 08:00</label>
+
+            <input type="radio" id="t3" name="time_slot" value="08:00-09:00">
+            <label for="t3">08:00 - 09:00</label>
+
+            <input type="radio" id="t4" name="time_slot" value="09:00-10:00">
+            <label for="t4">09:00 - 10:00</label>
+
+            <input type="radio" id="t5" name="time_slot" value="10:00-11:00">
+            <label for="t5">10:00 - 11:00</label>
+
+            <input type="radio" id="t6" name="time_slot" value="11:00-12:00">
+            <label for="t6">11:00 - 12:00</label>
+
+            <input type="radio" id="t7" name="time_slot" value="12:00-13:00">
+            <label for="t7">12:00 - 13:00</label>
+
+            <input type="radio" id="t8" name="time_slot" value="13:00-14:00">
+            <label for="t8">13:00 - 14:00</label>
+
+            <input type="radio" id="t9" name="time_slot" value="14:00-15:00">
+            <label for="t9">14:00 - 15:00</label>
+
+            <input type="radio" id="t10" name="time_slot" value="15:00-16:00">
+            <label for="t10">15:00 - 16:00</label>
+
+            <input type="radio" id="t11" name="time_slot" value="16:00-17:00">
+            <label for="t11">16:00 - 17:00</label>
+
+            <input type="radio" id="t12" name="time_slot" value="17:00-18:00">
+            <label for="t12">17:00 - 18:00</label>
+
+            <input type="radio" id="t13" name="time_slot" value="18:00-19:00">
+            <label for="t13">18:00 - 19:00</label>
+
+            <input type="radio" id="t14" name="time_slot" value="19:00-20:00">
+            <label for="t14">19:00 - 20:00</label>
+
+            <input type="radio" id="t15" name="time_slot" value="20:00-21:00">
+            <label for="t15">20:00 - 21:00</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SECTION 2: COURT ===== -->
+      <div class="form-section">
+        <h3>Select Court</h3>
+
+        <div class="court-cards">
+          <input type="radio" id="court1" name="court_id" value="1" required>
+          <label for="court1" class="court-card">
+            <strong>Court A</strong>
+            <span>Indoor</span>
+          </label>
+
+          <input type="radio" id="court2" name="court_id" value="2">
+          <label for="court2" class="court-card">
+            <strong>Court B</strong>
+            <span>Outdoor</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- ===== PAYMENT INFO ===== -->
+      <div class="payment-info">
+        <strong>Payment:</strong> Cash on Arrival
+      </div>
+
+      <!-- ===== SUMMARY ===== -->
+      <div class="booking-summary">
+        <h4>Booking Summary</h4>
+        <p>Date: <span id="summary-date">-</span></p>
+        <p>Time: <span id="summary-time">-</span></p>
+        <p>Court: <span id="summary-court">-</span></p>
+        <p>Payment: Cash on Arrival</p>
+      </div>
+
+      <button type="submit" class="btn-book">
+        Confirm Booking
+      </button>
+
+    </form>
+
+  </div>
+</main>
 
     <!-- ====================END MAIN=================== -->
     <!-- ====================START FOOTER=================== -->

@@ -881,6 +881,211 @@ html, body{
   color: #444;
   line-height: 1.5;
 }
+/* =========================
+   BOOKING PAGE (FINAL)
+   ========================= */
+
+.booking-page {
+  padding: 120px 20px 80px;
+  background: #f4f6f8;
+  font-family: var(--font-family);
+}
+
+/* Main card */
+.booking-container {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+/* Heading */
+.booking-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.booking-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Form sections */
+.booking-form {
+  width: 100%;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.booking-form input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* =========================TIME SLOTS========================= */
+
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.time-slots input {
+  display: none;
+}
+
+.time-slots label {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.time-slots label:hover {
+  border-color: #56a61e;
+}
+
+.time-slots input:checked + label {
+  background: #56a61e;
+  color: #fff;
+  border-color: #56a61e;
+}
+
+/* =========================COURT SELECTION========================= */
+
+.court-cards {
+  display: flex;
+  gap: 15px;
+}
+
+.court-cards input {
+  display: none;
+}
+
+.court-card {
+  flex: 1;
+  padding: 18px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.court-card strong {
+  display: block;
+  font-size: 16px;
+}
+
+.court-card span {
+  font-size: 13px;
+  color: #666;
+}
+
+.court-cards input:checked + .court-card {
+  border-color: #56a61e;
+  background: #f1f8ec;
+}
+
+/* =========================PAYMENT INFO========================= */
+
+.payment-info {
+  background: #f1f8ec;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2f6b00;
+  margin-bottom: 25px;
+}
+
+/* =========================BOOKING SUMMARY========================= */
+
+.booking-summary {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.booking-summary h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.booking-summary p {
+  margin: 4px 0;
+}
+
+/* =========================SUBMIT BUTTON========================= */
+
+.btn-book {
+  width: 100%;
+  padding: 14px;
+  background: #56a61e;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-book:hover {
+  background: #489015;
+}
+
+/* =========================RESPONSIVE========================= */
+
+@media (max-width: 600px) {
+  .time-slots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .court-cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .time-slots {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
