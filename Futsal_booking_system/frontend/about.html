@@ -1,73 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futsal Booking</title>
-    <!-- fav-icon -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <!-- css link  -->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Futsal Booking System</title>
 
+  <link rel="stylesheet" href="assets/css/style.css">
+   <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
-
 <body>
-    <!-- ====================START HEADER=================== -->
-    <header class="head" id="head">
-       <header class="navbar">
-  <div class="nav-container">
+   <!-- ===== FIXED BACK BUTTON ===== -->
+  <a href="index.html" class="back-fixed" aria-label="Back to Home">
+    <i class="bi bi-arrow-left-circle-fill"></i>
+  </a>
 
-    <!-- Logo -->
-    <a href="index.html" class="logo">
-      <img src="assets/images/logo.png" alt="FutsalHub Logo">
-    </a>
+  <!-- ===== HEADER / BREADCRUMB ===== -->
+  <header class="page-header">
+    <div class="page-nav">
+      <span><a href="index.html">Home</a></span>
+      <span class="divider">/</span>
+      <span class="current">About Us</span>
+    </div>
+  </header>
 
-    <!-- Navigation -->
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html" >Home</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="about.html"class="active">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- ===== MAIN ===== -->
+  <main class="info-page">
 
-    <!-- Auth Buttons -->
-    <div class="nav-auth">
-      <a href="login.html" class="btn btn-login">Login</a>
-      <a href="register.html" class="btn btn-register">Register</a>
+    <!-- PAGE HEADING -->
+    <div class="page-head">
+      <h1>About Us</h1>
+      <p>
+        Learn more about our vision, mission, and the community
+        we are building through futsal.
+      </p>
+    </div>
+
+    <!-- ===== BANNER GRID ===== -->
+    <section class="about-banners">
+      <div class="banner-box">
+        <img src="assets/images/favicon.png" alt="">
+      </div>
+      <div class="banner-box">
+        <img src="" alt="">
+      </div>
+      <div class="banner-box">
+        <img src="" alt="">
+      </div>
+    </section>
+
+    <!-- ===== VISION & MISSION ===== -->
+    <section class="vision-mission">
+
+      <!-- VISION -->
+      <div class="vision">
+        <h2>Our Vision</h2>
+        <p>
+          We envision a vibrant futsal ecosystem powered by smart technology
+          that enhances performance, accessibility, and passion for the game.
+        </p>
+        <p>
+          Our goal is to inspire players, teams, and organizers to unlock
+          their full potential while enjoying a seamless futsal experience.
+        </p>
+      </div>
+
+      <!-- MISSION -->
+      <div class="mission">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to simplify futsal management by providing a
+          centralized platform for bookings, communication, and insights.
+        </p>
+        <p>
+          Through innovation and community-driven design, we aim to support
+          players and organizers in achieving excellence together.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials">
+
+  <h2>What People Say</h2>
+
+  <div class="testimonial-grid">
+
+    <!-- Testimonial 1 -->
+    <div class="testimonial-card">
+
+      <div class="testimonial-header">
+        
+        <img src="assets/images/user1.jpg" alt="Reviewer image">
+
+        <div class="reviewer-info">
+          <strong>Local Futsal Organizer</strong>
+          <span>Kathmandu</span>
+        </div>
+      </div>
+
+      <p>
+        “Booking futsal courts has never been easier. The system saves
+        time and avoids confusion.”
+      </p>
+
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-card">
+
+      <div class="testimonial-header">
+        
+        <img src="assets/images/user2.jpg" alt="Reviewer image">
+
+        <div class="reviewer-info">
+          <strong>Amateur Player</strong>
+          <span>Lalitpur</span>
+        </div>
+      </div>
+
+      <p>
+        “The platform brings players and venues together in a very
+        organized and simple way.”
+      </p>
+
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial-card">
+
+      <div class="testimonial-header">
+        
+        <img src="assets/images/favicon.png" alt="Reviewer image">
+
+        <div class="reviewer-info">
+          <strong>Sports Enthusiast</strong>
+          <span>Bhaktapur</span>
+        </div>
+      </div>
+
+      <p>
+        “A great step toward modernizing futsal booking and management.”
+      </p>
+
     </div>
 
   </div>
-</header>
 
-        
-
-    </header>
-    <!-- ====================END HEADER=================== -->
+</section>
 
 
-    <!-- ====================START MAIN=================== -->
-    <main>
+  </main>
+  <!-- ====================START FOOTER=================== -->
 
-    </main>
+      <footer class="footer">
+  <div class="footer-container">
 
-    <!-- ====================END MAIN=================== -->
-    <!-- ====================START FOOTER=================== -->
-    <footer>
+    <!-- Column 1: Brand -->
+    <div class="footer-col brand-col">
+      <img src="assets/images/logobg.png" alt="FutsalHub Logo" class="footer-logo">
 
-    </footer>
+      <div class="social-links">
+        <!-- Icons only -->
+        <a href="#" aria-label="Facebook" class="fb" ><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="mail" class="ml" ><i class="bi bi-envelope-at"></i></i></a>
+        <a href="#" aria-label="WhatsApp" class="wp" ><i class="bi bi-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <!-- Column 2: Navigation -->
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="booking.html">Book a Slot</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Support -->
+    <div class="footer-col">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Legal -->
+    <div class="footer-col">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <hr>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+
+    <p>© 2026 Futsal Booking System | Roxu & Balmond</p>
+  </div>
+</footer>
+
+
     <!-- ====================END FOOTER=================== -->
 
-
-
-
-
-
-    <!-- js link  -->
-    <script src="assets/js/script.js"></script>
-
 </body>
-
 </html>
