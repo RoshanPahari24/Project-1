@@ -1777,8 +1777,7 @@ small {
 
 .court-cards input:checked + .court-card {
   border-color: var(--primary);
-  background: rgba(108, 211, 21, 0.1);
-  box-shadow: 0 4px 16px rgba(108, 211, 21, 0.2);
+  
 }
 
 .court-cards input:checked + .court-card strong {
@@ -1791,7 +1790,6 @@ small {
   padding: 16px 18px;
   border-radius: 12px;
   margin-bottom: 30px;
-  border-left: 4px solid var(--primary);
 }
 
 .payment-info strong {
