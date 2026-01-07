@@ -1223,7 +1223,7 @@ small {
 }
 
 .contact-form textarea {
-  min-height: 120px;
+  min-height: 300px;
   resize: vertical;
 }
 
