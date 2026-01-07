@@ -22,3 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("subscribe-form");
+  const emailInput = document.getElementById("subscribe-email");
+  const message = document.getElementById("subscribe-message");
+
+  if (!form) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (!emailInput.value.includes("@")) {
+      message.textContent = "Please enter a valid email address.";
+      message.style.color = "red";
+      return;
+    }
+
+    message.textContent = "Thanks for subscribing! You'll hear from us soon.";
+    message.style.color = "black";
+    emailInput.value = "";
+  });
+});
