@@ -1947,7 +1947,6 @@ label.booked {
   font-size: var(--font-size-small);
   pointer-events: none;
   transition: 0.25s ease;
-  background: #ffffff;
   padding: 0 6px;
 }
 

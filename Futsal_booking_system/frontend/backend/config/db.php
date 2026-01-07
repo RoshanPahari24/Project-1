@@ -1,17 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "futsal_booking_db"; 
-
-$conn = mysqli_connect($host, $user, $password, $database);
-
-if (!$conn) {
-    die("Database connection failed: " . mysqli_connect_error());
-}
+$conn = new mysqli("localhost", "root", "", "futsal_booking");
+if ($conn->connect_error) die("DB Connection Failed");
