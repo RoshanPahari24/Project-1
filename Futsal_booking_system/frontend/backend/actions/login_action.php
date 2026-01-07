@@ -19,25 +19,21 @@ if (mysqli_num_rows($result) !== 1) {
 
 $user = mysqli_fetch_assoc($result);
 
-/* Password check (plain for now) */
 if ($password !== $user['password']) {
     header("Location: ../../frontend/login.html?error=invalid");
     exit;
 }
 
-/* Create session */
 $_SESSION['user_id'] = $user['user_id'];
 $_SESSION['user_name'] = $user['user_name'];
 $_SESSION['email'] = $user['email'];
 
-/* ADMIN IDENTIFICATION */
 if ($user['email'] === 'admin@futsal.com') {
     $_SESSION['role'] = 'admin';
     header("Location: ../../frontend/admin_dashboard.html");
     exit;
 }
 
-/* CUSTOMER */
 $_SESSION['role'] = 'customer';
 header("Location: ../../frontend/customer_dashboard.html");
 exit;

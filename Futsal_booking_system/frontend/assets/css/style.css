@@ -1677,6 +1677,12 @@ small {
   font-size: var(--font-size-small);
   color: var(--secondary);
 }
+label.booked {
+  background: #dc2626;
+  color: #fff;
+  cursor: not-allowed;
+}
+
 
 .booking-left input[type="date"] {
   width: 100%;

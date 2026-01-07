@@ -1,45 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const dateInput = document.getElementById('booking_date');
-  const timeInputs = document.querySelectorAll('input[name="time_slot"]');
-  const courtInputs = document.querySelectorAll('input[name="court_id"]');
+document.addEventListener("DOMContentLoaded", () => {
 
-  if (dateInput) {
-    dateInput.addEventListener('change', () => {
-      document.getElementById('summary-date').textContent = dateInput.value;
+  const dateInput = document.getElementById("booking_date");
+  const courtRadios = document.querySelectorAll('input[name="court_id"]');
+  const slotRadios = document.querySelectorAll('input[name="time_slot"]');
+
+  function resetSlots() {
+    slotRadios.forEach(slot => {
+      slot.disabled = false;
+      slot.checked = false;
+      slot.nextElementSibling.classList.remove("booked");
     });
   }
 
-  timeInputs.forEach(input => {
-    input.addEventListener('change', () => {
-      document.getElementById('summary-time').textContent = input.value;
-    });
-  });
+  function loadBookedSlots() {
+    const date = dateInput.value;
+    const court = document.querySelector('input[name="court_id"]:checked');
 
-  courtInputs.forEach(input => {
-    input.addEventListener('change', () => {
-      const label = document.querySelector(`label[for="${input.id}"] strong`);
-      document.getElementById('summary-court').textContent = label.textContent;
-    });
-  });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("subscribe-form");
-  const emailInput = document.getElementById("subscribe-email");
-  const message = document.getElementById("subscribe-message");
+    if (!date || !court) return;
 
-  if (!form) return;
+    fetch(`../backend/actions/get_booked_slots.php?court_id=${court.value}&booking_date=${date}`)
+      .then(res => res.json())
+      .then(bookedSlots => {
+        resetSlots();
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+        bookedSlots.forEach(booked => {
+          slotRadios.forEach(slot => {
+            if (slot.value === booked) {
+              slot.disabled = true;
+              slot.nextElementSibling.classList.add("booked");
+            }
+          });
+        });
+      });
+  }
 
-    if (!emailInput.value.includes("@")) {
-      message.textContent = "Please enter a valid email address.";
-      message.style.color = "red";
-      return;
-    }
-
-    message.textContent = "Thanks for subscribing! You'll hear from us soon.";
-    message.style.color = "black";
-    emailInput.value = "";
-  });
+  dateInput.addEventListener("change", loadBookedSlots);
+  courtRadios.forEach(r => r.addEventListener("change", loadBookedSlots));
 });
