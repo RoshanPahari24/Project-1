@@ -180,9 +180,14 @@ html, body{
   font-size: 16px;
   transition: 0.3s ease-in-out;
 }
+.btn-hero i{
+  margin-left:5px;
+
+}
 
 .btn-hero:hover {
   background:var(--primary);
+  box-shadow:0 0 10px var(--primary);
 }
 
 /* RIGHT IMAGE ANIMATION */
@@ -249,12 +254,13 @@ html, body{
   padding: 30px 20px;
   border-radius: 16px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 5px var(--secondary);
   transition: transform 0.25s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 0 10px var(--primary);
 }
 
 /* ICON */
@@ -288,6 +294,193 @@ html, body{
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   SECTION 3 : PARALLAX CTA STRIP
+   ========================= */
+
+.cta-parallax {
+  min-height: 32vh;
+  background: #000; 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family);
+}
+
+/* Dark overlay for readability */
+.cta-overlay {
+  width: 100%;
+  padding: 100px 30px;
+  background:  rgba(103, 196, 26, 0.353);
+}
+
+/* Content layout */
+.cta-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+/* LEFT TEXT */
+.cta-text h2 {
+  font-size: 32px;
+  color:white;
+  margin-bottom: 8px;
+}
+
+.cta-text p {
+  font-size: 15px;
+  color:white;
+  max-width: 520px;
+}
+
+/* RIGHT BUTTON */
+.cta-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background:transparent;
+  color: #ffffff;
+  border: 1px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.cta-btn:hover {
+  background:var(--primary);
+}
+.cta-parallax {
+  background-image: url("how-1.png");
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cta-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-btn {
+    margin-top: 15px;
+  }
+
+  .cta-parallax {
+    background-attachment: scroll;
+  }
+}
+
+/* =========================
+   SECTION 4 : INTERACTIVE PRICING
+   ========================= */
+
+.pricing-interactive {
+  padding: 80px 30px;
+  background: #ffffff;
+  font-family: var(--font-family);
+}
+
+.pricing-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 32px;
+  margin-bottom: 8px;
+   margin-bottom: 50px;
+}
+
+
+/* Cards container */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+.pricing-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover focus effect */
+.pricing-cards:hover .pricing-card {
+  filter: blur(0.1px);
+  opacity: 0.6;
+  transform: scale(0.96);
+}
+
+.pricing-cards:hover .pricing-card:hover {
+  filter: blur(0);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Card content */
+.pricing-card h3 {
+  margin-bottom: 8px;
+}
+
+.pricing-card .time {
+  font-size: 13px;
+  color: #777;
+}
+
+.pricing-card .amount {
+  font-size: 20px;
+  font-weight: 600;
+  color: #56a61e;
+  margin: 18px 0;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-card li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* Highlight one card */
+.pricing-card.featured {
+  border: 2px solid #56a61e;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .pricing-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-cards:hover .pricing-card {
+    filter: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
