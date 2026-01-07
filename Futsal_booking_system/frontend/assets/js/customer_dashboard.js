@@ -6,26 +6,38 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* LOGOUT */
-  document.getElementById("logoutBtn").addEventListener("click", () => {
-    // PHP will destroy session later
-    window.location.href = "logout.php";
-  });
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      window.location.href = "../backend/auth/logout.php";
+    });
+  }
 
-  /* CANCEL BOOKING (UI only) */
+  /* CANCEL BOOKING (CUSTOMER) */
   document.querySelectorAll(".btn-cancel").forEach(btn => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", async () => {
       const row = btn.closest("tr");
-      const bookingId = row.dataset.bookingId;
+      const bookingId = row?.dataset.bookingId;
 
       if (!bookingId) return;
 
-      if (confirm("Are you sure you want to cancel this booking?")) {
-        /*
-          Later:
-          fetch('cancel_booking.php', { booking_id })
-        */
-        row.querySelector(".status").innerText = "Cancelled";
+      if (!confirm("Are you sure you want to cancel this booking?")) return;
+
+      const formData = new FormData();
+      formData.append("booking_id", bookingId);
+
+      try {
+        await fetch("../backend/actions/cancel_booking.php", {
+          method: "POST",
+          body: formData
+        });
+
+        row.querySelector(".status").innerText = "Cancelled by You";
         btn.remove();
+
+      } catch (error) {
+        console.error("Cancel failed:", error);
+        alert("Something went wrong. Try again.");
       }
     });
   });
