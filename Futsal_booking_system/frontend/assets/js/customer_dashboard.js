@@ -4,6 +4,21 @@
 ========================= */
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Session check (customer)
+fetch("../backend/auth/session_check.php")
+  .then(res => {
+    if (!res.ok) {
+      window.location.href = "login.html";
+    }
+    return res.json();
+  })
+  .then(user => {
+    document.getElementById("username").innerText = user.user_name;
+  })
+  .catch(() => {
+    window.location.href = "login.html";
+  });
+
 
   /* LOGOUT */
   const logoutBtn = document.getElementById("logoutBtn");
